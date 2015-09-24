@@ -83,6 +83,12 @@ module CSSMin
     # Replace background-position:0; with background-position:0 0;
     css = css.gsub('background-position:0;', 'background-position:0 0;')
 
+    # Replace transform-origin:0; with transform-origin:0 0;
+    css = css.gsub('transform-origin:0;', 'transform-origin:0 0;')
+
+    # Replace mask-position:0; with mask-position:0 0;
+    css = css.gsub('mask-position:0;', 'mask-position:0 0;')
+
     # Replace 0.6 with .6, but only when preceded by : or a space.
     css = css.gsub(/(:|\s)0+\.(\d+)/, '\1.\2')
 
